@@ -31,6 +31,7 @@ public class IntroToRandom {
 			// Uncomment the line of code below, but replace the _____ with a positive integer (e.g. 100) before running the program			
 
 			// number = ran.nextInt(_____);
+			number = ran.nextInt(100);
 			System.out.println(number);
 			
 		}
@@ -50,6 +51,7 @@ public class IntroToRandom {
 			// Also replace <lowest value> with the start of the range.  For our example, this is 25.
 			
 			// number = ran.nextInt(_____) + <lowest value>;
+			number = ran.nextInt(75-25+1) + 25;
 			System.out.println(number);
 			
 		}
@@ -60,6 +62,18 @@ public class IntroToRandom {
 		
 		// Using the above example, generate 5 random numbers between -222 and 88
 
-
+		for (int i = 0; i < 5; i++) {
+			number = ran.nextInt(88 + 222 + 1) - 222;
+			System.out.println(number);
+		}
 	}
 }
+
+
+
+
+
+
+
+
+
