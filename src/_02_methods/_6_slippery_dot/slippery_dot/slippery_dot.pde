@@ -6,6 +6,7 @@
 int x = 100;
 int y = 100;
 int size = 100;
+
 void setup() {
   // 2. Set the size of your sketch
   size(500, 500);
@@ -24,7 +25,12 @@ void draw() {
 /******** This method gets called automatically when you press the mouse ************/
 void mousePressed() {
   //5. Create an integer variable called distance
-  
+  int distance = getDistanceFromMouse(x, y);
+
+  if (distance < size) {
+    x = (int) random(width);
+    y = (int) random(height);
+  }
   //6. The getDistanceFromMouse() method below returns a number.
   //   Set the value of your distance variable to the value returned by the getDistance method
   //   You will need to pass the x and y location of your ellipse to this method.
